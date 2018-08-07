@@ -1,0 +1,74 @@
+*{
+    font-family: "Source Code Pro", monospace;
+    font-weight: 200;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+}
+header{
+	position: absolute;
+	top:0;
+	left:0;
+	right: 0;
+	height: 50px;
+	background: #333;
+	color: #ccc;
+}
+
+nav{
+	position: absolute;
+	top:50px;
+	left:0;
+	width: 200px;
+	bottom: 0;
+	background: #333;
+	color: #ccc;
+}
+aside{
+	position: absolute;
+	top:50px;
+	right:0;
+	width: 200px;
+	bottom: 0;
+	background: #333;
+	color: #ccc;
+}
+main{
+	position: absolute;
+	top:50px;
+	left: 200px;
+	right: 200px;
+	bottom: 0;
+	/*background: #333;*/
+	/*color: #ccc;*/
+}
+
+#editor {
+    height: 100%;
+    width: 100%;
+}
+
+#txt {
+	display: none;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 400px;
+    height: 500px;
+    border: 1px solid gray;
+    overflow: scroll
+}
+
+#htm-pre {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    height: 400px;
+    width: 100%;
+    border: 1px solid gray;
+    overflow: scroll
+}
+
+

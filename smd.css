@@ -1,0 +1,59 @@
+.H1 {
+    font-size: 2rem;
+    color: cornflowerblue;
+    font-weight: 400;
+}
+
+.H2 {
+    font-size: 1.6rem;
+    color: cornflowerblue
+}
+
+.H3 {
+    font-size: 1.2rem;
+    color: cornflowerblue;
+    font-weight: 400;
+}
+
+.IMG,
+.IMG+tr div {
+    background: #444 !important;
+    margin: 0 2rem;
+    padding: 3px 6px
+}
+
+.IMG+tr:not(.IMG) div {
+    color: #aaa
+}
+
+.LI {
+    color: turquoise;
+
+    /*padding-left: 2rem !important*/
+}
+
+.BQ,
+.BQ+tr div {
+    margin: 0 2rem;
+    color: #999
+}
+
+.BQ+tr:not(.BQ) div {
+    color: #666;
+    text-align: right;
+}
+
+.PID {
+    color: orange;
+    font-weight: 400;
+}
+
+.REF {
+    color: crimson;
+    font-weight: 400;
+}
+
+.QUO {
+    color: #777
+}
+
