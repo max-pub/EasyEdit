@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
 
-<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,400,500" rel="stylesheet">
 <link href="style.css" rel="stylesheet">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.7.5/beautify-html.js"></script>
@@ -11,12 +11,15 @@
 <!-- <div id='test'>test</div> -->
 
 <body>
-    <header>
+<!--     <header>
         ScienceDown
     </header>
-
+ -->
     <nav>
-        navigation
+        <h1>ScienceDown</h1>
+
+        <a>Content</a>
+        <a>References</a>
     </nav>
 
     <aside>
@@ -26,33 +29,7 @@
 <main>
     <easy-edit color='smd.json'></easy-edit>
 
-    <div id='editor'>
-### Heading Three
-
-some fancy text here with §xref, 'quote', [ref], baba...
-
-- sticky ingers
-- greasy stingers
-
-> big quote
-citation here
-
-picture.png
-figure description  §ref [ref] 
-
-Alzheimer ist eine Volkskrankheit. Und obwohl die Erstbeschreibung dieser Krankheit mittlerweile über 100 Jahre zurückliegt, ist noch immer keine effektive Therapie gefunden worden. Das könnte damit zusammenhängen, daß der Morbus Alzheimer über weite Teile des 20. Jahrhunderts als normaler Alterungsprozess abgetan wurde und sich Betroffene bestenfalls in Scham zurückgezogen haben. Dabei ist die Liste prominenter Patienten lang.
-
-Eine/r der ersten berühmten Erkrankten, der/die sich öffentlichkeitswirksam geäußert hat, war der ehemalige US-Präsident Ronald Reagan. Er teilte seine Gedanken in einem Brief mit der Öffentlichkeit. Dabei berührt er gleich mehrere wichtige Punkte. Er betont insbesondere die Bürde, die er seiner Frau und Familie damit auferlegt. Er spricht über das wichtige Thema der weiteren Lebensgestaltung nach Diagnosestellung. Aber auch das volle Bewusstsein der kommenden geistigen Regression findet eindrucksvollen Ausdruck:
-
-> At the moment, I feel just fine. I intend to live the remainder of the years God gives me on this earth doing the things I have always done. […] Unfortunately, as Alzheimer's disease progresses, the family often bears a heavy burden. I only wish there was some way I could spare [my wife] from this painful experience. […] I now begin the journey that will lead me into the sunset of my life.
-Ronald Reagan
-
-inzidenz.png
-regionen.png
-§AbbInz Altersabhängige Inzidenz & Prävalenz (links) sowie regionale Prävalenzverteilung (rechts) 
-
-wie man in Abbildung §AbbInz sehen kann,...
-    </div>
+    <div id='editor'></div>
 </main>
 
 
@@ -69,20 +46,24 @@ wie man in Abbildung §AbbInz sehen kann,...
 <script src="easy.edit.color.js"></script>
 <link href="smd.css" rel="stylesheet">
 <script>
-EE = new EasyEdit(document.querySelector('#editor'));
-EEC = new EasyEditColor(EE);
-EEC.highlight = {
-    PID: "§[\\w]+",
-    // REF: "[^\\w]\\[([\\w]+)\\][^\\w]",
-    REF: "\\[[\\w]+\\]",
-    QUO: "\\'[\\w\\s]+\\'",
-    H1: "^# .*",
-    H2: "^## .*",
-    H3: "^### .*",
-    LI: "^- .*",
-    BQ: "^> .*",
-    IMG: ".*\\.png$",
-}
+// EE = new EasyEdit('#editor').load('test.md');
+EE = new EasyEdit('#editor').load('main.md');
+EEC = new EasyEditColor(EE).load('smd.json');
+// EEC.highlight = {
+//     PID: "§[\\w]+",
+//     // REF: "[^\\w]\\[([\\w]+)\\][^\\w]",
+//     REF: "\\[[\\w]+\\]",
+//     QUOTE: "\\'[\\w\\s]+\\'",
+//     BOLD: "[^\\w]\\*\\*[\\w\\s]+\\*\\*[^\\w]",
+//     ITALIC: "[^\\w\\*]\\*[\\w\\s]+\\*[^\\w\\*]",
+//     H1: "^# .*",
+//     H2: "^## .*",
+//     H3: "^### .*",
+//     LI: "^- .*",
+//     BQ: "^> .*",
+//     IMAGE: ".*\\.png$",
+//     COMMENT: "\\/\\/.*",
+// }
 
 EE.node.addEventListener('change', e => {
     var lines = e.detail.lines;
@@ -91,55 +72,11 @@ EE.node.addEventListener('change', e => {
     // document.querySelector('#htm').innerText = html_beautify(EE.node.innerHTML);
     // Prism.highlightAll();
 })
+
+
+
 </script>
 
 
 
 
-
-
-
-
-
-
-
-
-<!--     <div id='ed2' hidden>
-        <s>a</s><s>b</s><s>c</s><s>d</s><br/>
-        <s>e</s><s>f</s><s>g</s><s>h</s><br/>
-        <s>i</s><s>j</s><s>k</s><s>l</s><br/>
-    </div>
- -->
-
-<!--     
-    <button class="" onclick="cmd('italic')">ita</button>
-    <button class="" onclick="block('H1')">h1</button>
-    <button class="" onclick="block('H2')">h2</button>
-    <button class="" onclick="block('p')">P</button>
-    <button class="" onclick="block('DIV')">DIV</button>
-    <button class="" onclick="block('UL')">UL</button>
-    <button class="" onclick='document.execCommand("insertParagraph", false, "abc");'>new p</button>
-    <button class="" onclick='document.execCommand("insertHTML", false, `</p><p>abc`)'>new p2</button>
-    <button class="" onclick="content()">content</button>
- -->
-
-<!--     <table id='ed2'>
-        <tr>
-            <td></td>
-            <td>ine one</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>inie zwei</td>
-            <td></td>
-        </tr>
-    </table>
- -->
-    <!-- <pre id='htm-pre' class="language-markup"><code id='htm'></code></pre> -->
-<!--     <div id='frame'>
-        <div id='numbers'></div>
-        <div class="editor" contenteditable>A</div>
-    </div>
-    <div class="blink">|</div>
- -->    

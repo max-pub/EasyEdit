@@ -3,8 +3,12 @@
     overflow-y: scroll;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
+    white-space: pre;
 }
-
+#space0,#space1{
+    height: 100px;
+    background: red;
+}
 s {
     text-decoration: none;
     display: inline-block;
@@ -34,14 +38,14 @@ td>div {
 }
 
 .EasyEdit td:nth-child(1) {
-    width: 1rem;
+    width: 2rem;
     text-align: right;
     background: #555;
     color: #aaa;
     padding: 0 .5rem
 }
 
-.EasyEdit tr {
+/*.EasyEdit tr {
     counter-increment: TR
 }
 
@@ -50,15 +54,22 @@ td>div {
     font-size: 15px;
     text-align: right
 }
-
+*/
 cursor {
     animation: blink 1s linear infinite;
-    color: red;
-    font-weight: bold;
+    /*color: red;*/
+    /*font-weight: bold;*/
+    /*border: 1px solid red;*/
+    /*position: relative;*/
+    /*height: 1em;*/
+    /*margin-left: -1px*/
+}
+cursor::before{
+    content: "";
     border: 1px solid red;
+    margin-left: -1px;
     position: relative;
     height: 1em;
-    margin-left: -1px
 }
 
 @keyframes blink {

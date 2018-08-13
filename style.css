@@ -7,7 +7,7 @@ body {
     overflow: hidden;
     margin: 0;
 }
-header{
+/*header{
 	position: absolute;
 	top:0;
 	left:0;
@@ -16,10 +16,10 @@ header{
 	background: #333;
 	color: #ccc;
 }
-
+*/
 nav{
 	position: absolute;
-	top:50px;
+	top:0;
 	left:0;
 	width: 200px;
 	bottom: 0;
@@ -28,7 +28,7 @@ nav{
 }
 aside{
 	position: absolute;
-	top:50px;
+	top:0;
 	right:0;
 	width: 200px;
 	bottom: 0;
@@ -37,14 +37,20 @@ aside{
 }
 main{
 	position: absolute;
-	top:50px;
+	top:0;
 	left: 200px;
 	right: 200px;
 	bottom: 0;
-	/*background: #333;*/
+	background: #000;
 	/*color: #ccc;*/
 }
-
+nav a{
+	display: block;
+}
+nav a:hover{
+	color: red;
+	cursor: pointer;
+}
 #editor {
     height: 100%;
     width: 100%;
@@ -71,4 +77,9 @@ main{
     overflow: scroll
 }
 
-
+.point{
+	position: absolute;
+	padding:3px;
+	border-radius: 100px;
+	background: red;
+}

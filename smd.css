@@ -1,7 +1,7 @@
 .H1 {
     font-size: 2rem;
     color: cornflowerblue;
-    font-weight: 400;
+    font-weight: 400 !important;
 }
 
 .H2 {
@@ -14,32 +14,59 @@
     color: cornflowerblue;
     font-weight: 400;
 }
-
-.IMG,
-.IMG+tr div {
-    background: #444 !important;
-    margin: 0 2rem;
-    padding: 3px 6px
+.H4 {
+    font-size: 1rem;
+    color: cornflowerblue;
+    font-weight: 400;
 }
 
-.IMG+tr:not(.IMG) div {
-    color: #aaa
+.blankLine{
+    color: red;
+}
+.IMAGE {
+    color: turquoise;
+    background: #444;
+    margin: 0 2rem;
+    padding: 3px 6px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.IMAGE-line+tr div:not(.IMAGE) {
+    color: #aaa;
+    background: #444;
+    margin: 0 2rem;
+    padding: 3px 6px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+tr:not(.IMAGE-line) + tr.IMAGE-line div{
+    border-top: 1px solid white;
 }
 
 .LI {
-    color: turquoise;
-
-    /*padding-left: 2rem !important*/
-}
-
-.BQ,
-.BQ+tr div {
+    color: #9f9;
     margin: 0 2rem;
-    color: #999
+}
+.LI2 {
+    color: #bfb;
+    margin: 0 3.3rem;
+}
+.LI3 {
+    color: #dfd;
+    margin: 0 5rem;
 }
 
-.BQ+tr:not(.BQ) div {
-    color: #666;
+.BQ{
+    margin: 0 3rem;
+    color: #aaa
+}
+
+.BQ-line+tr div:not(.BQ) {
+    margin: 0 3rem;
+    color: #777;
     text-align: right;
 }
 
@@ -48,12 +75,32 @@
     font-weight: 400;
 }
 
-.REF {
+.REF,.PMID,.ISBN {
     color: crimson;
     font-weight: 400;
 }
 
-.QUO {
+.QUOTE,.QUOTE2 {
     color: #777
 }
+.BOLD {
+    color: #ffc;
+    font-weight: 500;
+}
+.ITALIC{
+    color: #ffc;
+    font-style: italic;
+}
 
+div.COMMENT{
+    border: none !important;
+    /*border-left: 5px solid darkred !important;*/
+    /*margin-left: 4rem !important;*/
+    /*padding-left: 1rem !important;*/
+    color: #755 !important;
+    background: transparent !important;
+}
+.COMMENT s{
+    text-decoration: line-through !important;
+    
+}
